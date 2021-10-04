@@ -69,8 +69,7 @@ while seguir!="x": #aqui comienza el proceso de sustitucion de letras manual
             #if letra2[i] in letras2Cambiadas and letra2=letra2.upper():
             #    continuar=input("esta letra ya la has puesto anteriormente, estas seguro de que quieres volver a hacerlo?")
             text2=text2.replace(letra1[i],letra2[i].upper())
-            letras1Cambiadas.append(letra1[i])
-            letras2Cambiadas.append(letra2[i])
+
 
     else:#si has puesto un punto en la  se cambia la palabra que metes tal cual la has metido en el texto
         text2=text2.replace(l1,l2.replace(".","").upper())
