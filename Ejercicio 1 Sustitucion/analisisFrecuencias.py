@@ -58,6 +58,7 @@ for caracter in letrasTexto:
             if caracter in text:
                 indice=letrasTexto.index(caracter)
                 text=text.replace(caracter,letras[indice].upper())
+                cambiosRealizados[caracter.lower()]=letras[indice].upper()
 
                 print(text+"|||||"+letras[indice].upper()+caracter+"\n___________")
                 seguir=input("seguir? ").upper()
@@ -83,7 +84,7 @@ while l1!="stop": #aqui comienza el proceso de sustitucion de letras manual
         letra2=list(l2)
 
         for i in range(0,len(letra1)): #este bucle va sustituyendo cada letra de la palabra metida en el texto
-            if letra1[i]!=letra1[i].upper():
+            if letra1[i].islower():
                 text2=text2.replace(letra1[i],letra2[i].upper())
                 cambiosRealizados[letra1[i].lower()]=letra2[i].upper()
 
