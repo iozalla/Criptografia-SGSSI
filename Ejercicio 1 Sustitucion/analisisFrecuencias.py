@@ -4,7 +4,7 @@ from colorama import Fore, Back, Style
 from colorama import init
 init()
 file = open('texto.txt',mode='r', encoding="UTF-8")
-text = file.read()
+text=original = file.read()
 file.close()
 text=text.lower()
 print("\n"+text+"\n")
@@ -83,10 +83,9 @@ while l1!="stop": #aqui comienza el proceso de sustitucion de letras manual
         letra2=list(l2)
 
         for i in range(0,len(letra1)): #este bucle va sustituyendo cada letra de la palabra metida en el texto
-            #if letra2[i] in letras2Cambiadas and letra2=letra2.upper():
-            #    continuar=input("esta letra ya la has puesto anteriormente, estas seguro de que quieres volver a hacerlo?")
-            text2=text2.replace(letra1[i],letra2[i].upper())
-            cambiosRealizados[letra1[i].lower()]=letra2[i].upper()
+            if letra1[i]!=letra1[i].upper():
+                text2=text2.replace(letra1[i],letra2[i].upper())
+                cambiosRealizados[letra1[i].lower()]=letra2[i].upper()
 
 
     else:#si has puesto un punto en la  se cambia la palabra que metes tal cual la has metido en el texto
