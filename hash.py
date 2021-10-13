@@ -25,7 +25,7 @@ def p2():
             content = a_file.read()
             hash=hashlib.md5(content).hexdigest()
 
-            if hash=="e5ed313192776744b9b93b1320b5e268":
+            if hash==hashOriginal:
                 print("Encontrado: "+filename,hash)
         except Exception as e:
             print(e)
